@@ -10,7 +10,7 @@ services:
   server_config: {user_table: users}
 - source: /runtime/services/google.yml
   client_config: {}
-  server_config: {}
+  server_config: {app_origin_redirect: true}
 startup: {type: form, module: Homepage}
 package_name: Website_where_you_can_make_articles
 allow_embedding: false
