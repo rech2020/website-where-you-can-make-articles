@@ -39,10 +39,7 @@ def get_articles():
   if current_user is not None:
     # Get a list of articles that belong to the logged-in user,
     # sorted by 'created' column, in descending order
-    return app_tables.articles.search(
-      tables.order_by("created", ascending=False),
-      user=current_user
-    )
+    return app_tables.articles.search(    )
 
 @anvil.server.callable
 def update_article(article, article_dict):
