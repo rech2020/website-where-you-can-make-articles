@@ -9,13 +9,19 @@ components:
   layout_properties: {slot: default}
   components:
   - type: Button
-    properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+    properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Add an article, font_size: null, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: 'fa:plus-circle'}
     name: add_article_button
     layout_properties: {grid_position: 'TSRERI,WBMVAM'}
     event_bindings: {click: add_article_button_click}
+  - name: add_category
+    properties: {text: add a category, role: filled-button, icon: 'fa:plus-square',
+      align: left}
+    type: Button
+    layout_properties: {grid_position: 'TSRERI,ZURNAT'}
+    event_bindings: {click: add_category_click}
   - type: RepeatingPanel
     properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
       visible: true, spacing_above: small, spacing_below: small, item_template: ArticleView,

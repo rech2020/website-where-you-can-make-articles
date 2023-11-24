@@ -8,6 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ..ArticleEdit import ArticleEdit
+from ..AddCategory import AddCategory
 
 class Homepage(HomepageTemplate):
   def __init__(self, **properties):
@@ -45,3 +46,15 @@ class Homepage(HomepageTemplate):
     anvil.server.call('delete_article', article)
     # Refresh articles to remove the deleted article from the Homepage
     self.refresh_articles()
+
+  def add_category_click(self, **event_args):
+    new_category = {}
+    save_clicked = alert(
+      content=AddCategory(item=new_category),
+      title="Add Category",
+      large=True,
+      buttons=[("Save", True), ("Cancel", False)]
+    )
+    if save_clicked:
+      anvil.server.call('add_category', new_category)
+      

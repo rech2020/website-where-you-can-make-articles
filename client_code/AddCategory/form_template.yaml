@@ -1,0 +1,15 @@
+container:
+  type: ColumnPanel
+  data_bindings: []
+components:
+- name: label_1
+  properties: {text: 'category:', bold: false}
+  type: Label
+  layout_properties: {grid_position: 'NVBJCE,DENVFY'}
+- name: category_box
+  properties: {placeholder: category name, role: null, hide_text: false}
+  type: TextBox
+  layout_properties: {grid_position: 'NVBJCE,VNUPNA'}
+  data_bindings:
+  - {property: text, code: 'self.item[''name'']', writeback: true}
+is_package: true

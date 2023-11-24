@@ -64,3 +64,9 @@ def delete_article(article):
     # Raise an exception if the article doesn't exist in the Data Table
     # or the user doesn't own the article being deleted
     raise Exception("Article does not exist or does not belong to this user")
+
+@anvil.server.callable
+def add_category(category_dict):
+  app_tables.categories.add_row(
+    **category_dict
+  )
