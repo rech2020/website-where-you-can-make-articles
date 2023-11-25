@@ -8,7 +8,6 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ..Homepage import Homepage
-from ..About import About
 
 class About(AboutTemplate):
   def __init__(self, **properties):
@@ -16,11 +15,11 @@ class About(AboutTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-
+    
   def home_link_click(self, **event_args):
-    homepage = Homepage()
-    open_form(homepage)
+    self.content_panel.clear()
+    self.content_panel.add_component(Homepage())
 
   def about_link_click(self, **event_args):
-    about = About()
-    open_form(about)
+    self.content_panel.clear()
+    self.content_panel.add_component(About())

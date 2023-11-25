@@ -8,10 +8,17 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - name: flow_panel_1
+  - name: linear_panel_1
     properties: {}
-    type: FlowPanel
-    layout_properties: {grid_position: 'SXHZNN,UECYAV'}
+    type: LinearPanel
+    layout_properties: {grid_position: 'WUAXZK,GYKYJR'}
+    components:
+    - name: rich_text_1
+      properties: {content: 'This is a website where you can make articles
+
+          '}
+      type: RichText
+      layout_properties: {}
 - type: FlowPanel
   properties: {}
   name: navbar_links

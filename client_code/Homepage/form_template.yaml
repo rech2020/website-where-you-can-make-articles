@@ -38,3 +38,16 @@ components:
       '}
   type: Label
   layout_properties: {slot: title}
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: left-nav}
+  components:
+  - name: home_link
+    properties: {text: Home, align: center}
+    type: Link
+    layout_properties: {grid_position: 'AAKYYT,BQGFDC'}
+  - name: about_link
+    properties: {text: About, align: center}
+    type: Link
+    layout_properties: {grid_position: 'BSLICU,HZRZVA'}

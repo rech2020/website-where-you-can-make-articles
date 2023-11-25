@@ -9,6 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from ..ArticleEdit import ArticleEdit
 from ..AddCategory import AddCategory
+from ..About import About
 
 class Homepage(HomepageTemplate):
   def __init__(self, **properties):
@@ -58,3 +59,10 @@ class Homepage(HomepageTemplate):
     if save_clicked:
       anvil.server.call('add_category', new_category)
       
+  def home_link_click(self, **event_args):
+    self.content_panel.clear()
+    self.content_panel.add_component(Homepage())
+
+  def about_link_click(self, **event_args):
+    self.content_panel.clear()
+    self.content_panel.add_component(About())
