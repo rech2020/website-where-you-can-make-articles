@@ -16,8 +16,7 @@ class About(AboutTemplate):
     # Any code you write here will run before the form opens.
     
   def home_link_click(self, **event_args):
-    pass
+    open_form('Homepage')
 
   def about_link_click(self, **event_args):
-    self.content_panel.clear()
-    self.content_panel.add_component(About())
+    open_form('About')

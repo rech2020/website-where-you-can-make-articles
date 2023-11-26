@@ -60,9 +60,7 @@ class Homepage(HomepageTemplate):
       anvil.server.call('add_category', new_category)
       
   def home_link_click(self, **event_args):
-    self.content_panel.clear()
-    self.content_panel.add_component(Homepage())
+    open_form('Homepage')
 
   def about_link_click(self, **event_args):
-    self.content_panel.clear()
-    self.content_panel.add_component(About())
+    open_form('About')
