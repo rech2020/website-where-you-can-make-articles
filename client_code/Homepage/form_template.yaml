@@ -47,7 +47,9 @@ components:
     properties: {text: Home, align: center}
     type: Link
     layout_properties: {grid_position: 'AAKYYT,BQGFDC'}
+    event_bindings: {click: home_link_click}
   - name: about_link
-    properties: {text: About (soon), align: center}
+    properties: {text: About, align: center}
     type: Link
     layout_properties: {grid_position: 'BSLICU,HZRZVA'}
+    event_bindings: {click: about_link_click}
