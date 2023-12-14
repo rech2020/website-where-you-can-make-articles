@@ -34,6 +34,7 @@ class Homepage(HomepageTemplate):
     )
     # If the alert returned 'True', the save button was clicked.
     if save_clicked:
+      print('created an article')
       anvil.server.call('add_article', new_article)
       self.refresh_articles()
 
@@ -57,6 +58,7 @@ class Homepage(HomepageTemplate):
       buttons=[("Save", True), ("Cancel", False)]
     )
     if save_clicked:
+      print('created a category')
       anvil.server.call('add_category', new_category)
       
   def home_link_click(self, **event_args):
